@@ -5,11 +5,14 @@ var botoesSubtrair = document.getElementsByName('subtrair');
 var botaoAdicionar;
 var botaoSubtrair;
 var divToDo = document.getElementById('div-to-do-list')
+var botaoNovaTarefa = document.getElementById('novaTarefa');
+var txtNovaTarefa = document.getElementById('txtToDo')
 const VALOR_MAXIMO = 10;
 const VALOR_MINIMO = -10;
 const CLASSE_DESABILITADA = 'disabled';
 const CLASSE_TEXTO_VERMELHO = 'texto-vermelho';
 const CLASSE_TEXTO_RISCADO = 'texto-riscado';
+const CLASSE_CHECK_BOX = 'check-box-to-do';
 
 // Adicionando os eventos ao ser carregada a tela
 document.addEventListener("DOMContentLoaded", carregarEventos, false);
@@ -27,6 +30,9 @@ function carregarEventos() {
     if (listaPreenchida(botoesSubtrair)) {
         botaoSubtrair = botoesSubtrair[0];
         botaoSubtrair.addEventListener("click", decrement, false);
+    }
+    if (botaoNovaTarefa != null){
+        botaoNovaTarefa.addEventListener("click", adicionarNovaTarefa, false);
     }
 }
 
@@ -98,6 +104,44 @@ function removerClasse(elemento, classe){
     elemento.classList.remove(classe);
 }
 
+// verifica se a lista passada por parâmetro foi preenchida
 function listaPreenchida(lista){
     return lista != null && lista.length > 0;
+}
+
+// adiciona um checkbox ao to-do list
+function adicionarNovaTarefa(){
+    var divToDo = document.getElementById('div-to-do-list');
+    var checkBox = criarCheckBox(txtNovaTarefa.value);
+    divToDo.appendChild(checkBox);
+    txtNovaTarefa.value = '';
+}
+
+// cria um elemento do tipo checkbox
+function criarCheckBox(texto){
+    var divCheckBox = document.createElement('div');
+    var checkBox = document.createElement('input');
+    var label = document.createElement('label');
+    var descricaoTarefa = document.createTextNode(texto);
+    var data = Date.now();
+    var id = texto + data;
+    label.appendChild(descricaoTarefa);
+    label.setAttribute('for', id);
+    checkBox.type = 'checkbox';
+    checkBox.setAttribute('id', id);
+    checkBox.setAttribute('name', texto);       
+    divCheckBox.appendChild(checkBox);
+    divCheckBox.appendChild(label);
+    adicionarClasse(divCheckBox, CLASSE_CHECK_BOX);
+    checkBox.addEventListener("click", function(){verificarCheckBoxMarcado(checkBox, divCheckBox)}, false);
+    return divCheckBox;
+}
+
+// verifica se o checkbox foi marcado caso verdadeiro é alterada a classe do checkbox
+function verificarCheckBoxMarcado(checkBox, divCheckBox){
+    if (checkBox.checked){
+        adicionarClasse(divCheckBox, CLASSE_TEXTO_RISCADO);
+    } else {
+        removerClasse(divCheckBox, CLASSE_TEXTO_RISCADO);
+    }
 }

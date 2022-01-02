@@ -48,7 +48,29 @@ button {
     text-decoration: line-through;
 }
 
-.botao-nova-tarefa{
-    border-radius: 10px;
-    width: 70px;
+.borda-arredondada {
+    border-radius: 5px;    
 }
+
+.botao-nova-tarefa{
+    width: 90px;
+    height: 25px;
+    font-size: 12pt;
+}
+
+.txt-todo-list{
+    border: 2px solid #585858;
+    margin-right: 5px;
+}
+
+#div-to-do-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .check-box-to-do {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
