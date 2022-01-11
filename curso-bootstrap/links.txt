@@ -1,3 +1,5 @@
 Imagens: https://www.pexels.com/
 Cores: https://html-color-codes.info
 Lorem: https://br.lipsum.com
+Fontes: fonts.google.com
+Fontes de icones: fontawesome.com

@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NETFLIX CLONE</title>
     <link rel="stylesheet" href="style/main.css">
+    <!-- responsividade -->
+    <link rel="stylesheet" href="style/responsive.css">
+    <!-- owl css -->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h2>NETFLIX</h2>
+            <h2 class="logo">NETFLIX</h2>
             <nav>
                 <a href="#">Início</a>
                 <a href="#">Séries</a>
@@ -19,5 +26,40 @@
             </nav>
         </div>
     </header>
+    <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">STAR WARS - Os Últimos Jedi</h3>
+                <p class="descricao">A tranquila e solitária vida de Luke Skywalker sofre uma reviravolta quando ele
+                    conhece Rey, uma jovem que mostra fortes sinais da Força. O desejo dela de aprender o estilo dos
+                    Jedi força Luke a tomar uma decisão que mudará sua vida para sempre. Enquanto isso, Kylo Ren e o
+                    General Hux lideram a Primeira Ordem para um ataque total contra Leia e a Resistência pela
+                    supremacia da galáxia.</p>
+                <div class="botoes">
+                    <button role="button" class="botao"><i class="fas fa-play"></i>ASSISTIR AGORA</button>
+                    <button role="button" class="botao"><i class="fas fa-info-circle"></i>MAIS INFORMAÇÕES</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img class="box-filme" src="img/star-wars-a-ameaca-fantasma.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/star-wars-a-ascensao-skywalker.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/star-wars-a-guerra-dos-clones.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/star-wars-contos.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/star-wars-despertar-da-forca.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/star-wars-han-solo.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/star-wars-rogue-one.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/stars-wars-a-vinganca-dos-sith.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/stars-wars-nova-esperanca.jpg"></div>
+            <div class="item"><img class="box-filme" src="img/star-wars-wrath-of-the-mandalorian.jpg"></div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/22d71e8cbe.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

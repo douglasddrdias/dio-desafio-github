@@ -1,0 +1,31 @@
+@media screen and (max-width:700px){
+    header .container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+     .filme-principal{
+        padding-top: 230px;
+        padding-bottom: 300px;
+    } 
+
+    .botao {
+        margin-top: 5px;
+        width: 190px;
+        height: 60px;
+    }
+
+    .carrosel-filmes {
+        margin-top: 10px;
+    }  
+    
+    .filme-principal .descricao {
+        margin-bottom: 10px;
+    }    
+}
+
+@media screen and (min-width: 1000px){
+    .descricao {
+        width: 50%;
+    }
+}
