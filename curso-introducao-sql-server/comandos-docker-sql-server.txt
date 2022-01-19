@@ -37,3 +37,16 @@ select *, CONVERT (varchar(50), DataSolicitacao, 103) from Pedido p ;
 insert into PedidoItemLog (CodigoPedido, CodigoProduto, CodigoStatusPedidoItem, DataMovimento)
 select CodigoPedido,CodigoProduto, 1, GETDATE()
 from PedidoItem pi2 ;
+
+// criar um usuário 
+CREATE LOGIN starwars WITH PASSWORD = 'Starwars1'
+GO
+// indo para o banco para dar permissão
+Use EstrelaDaMorte;
+GO
+// da permissão a um usuário
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'starwars')
+BEGIN
+    CREATE USER [starwars] FOR LOGIN [starwars]
+    EXEC sp_addrolemember N'db_owner', N'starwars'
+END;
