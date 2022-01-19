@@ -3,3 +3,6 @@ Cores: https://html-color-codes.info
 Lorem: https://br.lipsum.com
 Fontes: fonts.google.com
 Fontes de icones: fontawesome.com
+componente owl carousel: owlcarousel2.github.io/OwlCarousel2/
+Informações de filmes: https://www.themoviedb.org
+projeto final do rubens: https://www.linkedin.com/posts/rubens-rafael-1455a4213_react-dio-inter-activity-6889172638976016384-f5Ly

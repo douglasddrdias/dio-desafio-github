@@ -1,0 +1,39 @@
+//link referência
+https://docs.microsoft.com/pt-br/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash
+// iniciando a instalação da imagem.
+sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+// executando a imagem 
+sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=minhasenhapadrao @" \
+   -p 1433:1433 --name master -h master \
+   -d mcr.microsoft.com/mssql/server:2019-latest
+// exibir os conteiners docker
+sudo docker ps -a
+// conectar com o banco
+sudo docker exec -it master "bash"
+// selecionar o usuário
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "minhasenhapadrao @"
+// iniciar a imagem
+sudo docker start master 
+
+comandos de insert
+insert into Clientes (Codigo, Nome, TipoPessoa) values (1, 'Thiago', 'F');
+insert Clientes (Codigo, Nome, TipoPessoa) values (2, 'Thiago', 'F');
+insert Clientes values (4, 'Thiago', 'F');
+insert Clientes values (5, 'Thiago', 'F'), (6, 'Thiago', 'J');
+
+// comandos de conversão
+select isNull(DataCriacao, getdate()) from Clientes c ;
+
+select *,
+case when TipoPessoa = 'J' THEN 'Jurídica'
+when TipoPessoa = 'F' then 'Física'
+else 'Pessoa indefinida'
+END + CONVERT (varchar, GETDATE(), 103) 
+from Clientes c ;
+
+select *, CONVERT (varchar(50), DataSolicitacao, 103) from Pedido p ;
+
+// inset com select
+insert into PedidoItemLog (CodigoPedido, CodigoProduto, CodigoStatusPedidoItem, DataMovimento)
+select CodigoPedido,CodigoProduto, 1, GETDATE()
+from PedidoItem pi2 ;
