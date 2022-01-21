@@ -32,6 +32,7 @@ npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
 npm i --save html-webpack-plugin
 npm i -D webpack-dev-server
 npm i --save-dev eslint@6.0.1 babel-eslint@10.0.2 eslint-plugin-react@7.14.2 eslint-watch@5.1.2
+npm i html-loader@0.5.5
 
 
 # Getting Started with Create React App
