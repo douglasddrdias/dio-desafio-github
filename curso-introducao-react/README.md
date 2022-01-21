@@ -25,6 +25,14 @@ npm i --save-dev eslint babel-eslint eslint-plugin-react eslint-watch
 npm i --save-dev eslint@6.0.1 babel-eslint@10.0.2 eslint-plugin-react@7.14.2 eslint-watch@5.1.2
 "eslint": "eslint ./src/*.js"
 
+// renderização condicional
+npm i --save react@16.8.6 react-dom@16.8.6 react-scripts@3.0.1
+npm i -D webpack webpack-cli 
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+npm i --save html-webpack-plugin
+npm i -D webpack-dev-server
+npm i --save-dev eslint@6.0.1 babel-eslint@10.0.2 eslint-plugin-react@7.14.2 eslint-watch@5.1.2
+
 
 # Getting Started with Create React App
 
