@@ -42,7 +42,7 @@ from PedidoItem pi2 ;
 CREATE LOGIN starwars WITH PASSWORD = 'Starwars1'
 GO
 // indo para o banco para dar permissão
-Use EstrelaDaMorte;
+Use EstrelaDaMorte ;
 GO
 // da permissão a um usuário
 IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'starwars')
