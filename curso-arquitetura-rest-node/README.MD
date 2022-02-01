@@ -17,3 +17,6 @@ parar criar uma rota no express é seguir o padrão de url da rota e os resolver
 biblioteca para observar alterações no código e automatizar o build
 npm i --save-dev ts-node-dev
 usar esse comando no package.json ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts
+a partir dos dois pontos o express entende como uma variável para aplicação recuperar
+Para parâmetrizar os status codes usar a biblioteca http-status-codes
+npm i --save http-status-codes
