@@ -20,3 +20,16 @@ usar esse comando no package.json ts-node-dev --respawn --transpile-only --ignor
 a partir dos dois pontos o express entende como uma variável para aplicação recuperar
 Para parâmetrizar os status codes usar a biblioteca http-status-codes
 npm i --save http-status-codes
+pg é a biblioteca padrão do postgres e é o drive de conexão
+é uma boa prática consultar no npm quantas pessoas baixaram na semana a biblioteca
+npm i --save pg
+npm i --save-dev @types/pg
+o comando crypt('') no postgress cria uma chave de criptografia
+interface é somente um contrato sem implementações
+uma classe é algo que vai derivar de um objeto
+um type é simplesmente uma definição possui somente regras de como será o objeto
+async e await são apenas um açucar sitaxe
+existem dois tipos de middlewares no express um de tratamento de erros e outro interceptador genêrico
+middleware é uma function
+erro handler sempre deve ser declarado ao final das rotas
+nextFunction é uma maneira de mandar para frente as nossas requisições
