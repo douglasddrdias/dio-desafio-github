@@ -46,3 +46,4 @@ sobre token JKS
 "iat" Data de criação do token
 "jti" O id do token
 arquivo .d é um arquivo de definição é semelhante a uma "interface" sua localização é especificada dentro do arquivo tsconfig.json
+ficar atento a ordem que são criados os endpoints pois no expresse pode fazer diferença se for um endpoint raiz o mais especico pode não ser chamado
