@@ -13,3 +13,6 @@ todo list bacana: https://web.dio.me/topics/projeto-to-do-list?tab=forum&topic_t
 desinstalar programas ubunto: https://pt.wikihow.com/Desinstalar-Softwares-no-Ubuntu
 Link do npm: www.npmjs.com
 link do garagem digital: www.garagemdigital.io/react-hooks-o-que-sao/
+link de banco de dados postgres: https://www.elephantsql.com
+link do jwt: jwt.io
+proteger as chaves no git: https://medium.com/trainingcenter/protegendo-dados-sensíveis-com-git-crypt-9fca13e6835b
