@@ -33,3 +33,16 @@ existem dois tipos de middlewares no express um de tratamento de erros e outro i
 middleware é uma function
 erro handler sempre deve ser declarado ao final das rotas
 nextFunction é uma maneira de mandar para frente as nossas requisições
+basic authentication sempre vem no padrão começando por Basic e um token base 64
+um jwt é um token composto de 3 partes, header, pauload e um hash a partir do conteúdo de uma privatekey
+npm install --save jsonwebtoken
+npm i --save-dev @types/jsonwebtoken
+sobre token JKS
+"iss" é o domíni da aplicação geradora do token
+"sub" é o assunto do token, mas é mto utilizado para guardar o id do usuário
+"aud" Define quem pode usar o token
+"exp" Data para expiração do token
+"nbf" Define uma data para qual o token não pode ser aceito antes dela
+"iat" Data de criação do token
+"jti" O id do token
+arquivo .d é um arquivo de definição é semelhante a uma "interface" sua localização é especificada dentro do arquivo tsconfig.json
