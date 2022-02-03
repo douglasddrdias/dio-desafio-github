@@ -47,3 +47,4 @@ sobre token JKS
 "jti" O id do token
 arquivo .d é um arquivo de definição é semelhante a uma "interface" sua localização é especificada dentro do arquivo tsconfig.json
 ficar atento a ordem que são criados os endpoints pois no expresse pode fazer diferença se for um endpoint raiz o mais especico pode não ser chamado
+fazer um endpoint de refresh token e lançar uma exceção diferente quando o token estiver expirado e retornar statuscode 401 quando o token expirar
